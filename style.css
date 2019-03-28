@@ -7,8 +7,11 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.17);
     border: 1px solid #ececec;
     background-color: #ffffff;
     height: 100px;
@@ -66,13 +69,18 @@ body {
 }
 
 .header__form input {
-    width: 317px;
-    height: 38px;
+    width: 320px;
+    height: 40px;
     border-top: solid 1px #e6e6e6;
     border-bottom: solid 1px #e6e6e6;
     border-right: solid 1px #e6e6e6;
     border-left: solid 1px #e6e6e6;
     background-color: #ffffff;
+    padding: 11px 16px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    color: #a4a4a4;
+    box-sizing: border-box;
 }
 
 .header__form button {
@@ -124,6 +132,7 @@ body {
     display: flex;
     list-style-type: none;
     justify-content: center;
+    background-color: #fff;
 }
 
 .menu__link {
@@ -269,38 +278,37 @@ body {
     justify-content: space-between;
 }
 
-.product_card {
-    width: 225px;
-    height: 364px;
-    margin: 2.437% 1.875%;
-}
-
-.product_card:hover {
-    box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
-    background-color: #ffffff;
-}
-
-.product_card .image_1 {
-    height: 280px;
-    background-image: url(img/pr_1.jpg);
+.product {
+    width: 261px;
     position: relative;
+    margin-bottom: 39px;
 }
 
-.product_card .image_1 .hover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(58, 56, 56, 0.83);
+.product:hover {
+    box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+.product:hover .product__add {
     visibility: visible;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
 }
 
-.hover_button {
+.product:hover .product__img {
+    filter: brightness(30%);
+}
+
+.product__img {
+    object-fit: cover;
+    width: 100%;
+    height: 280px;
+}
+
+.product__add {
+    position: absolute;
     padding-left: 12px;
     padding-right: 14px;
+    visibility: hidden;
     height: 39px;
+    box-sizing: border-box;
     line-height: 39px;
     border: solid 1px #ffffff;
     font-family: Arial;
@@ -310,73 +318,29 @@ body {
     font-stretch: normal;
     letter-spacing: normal;
     color: #ffffff;
-    text-decoration: none;
-    margin-top: 98px;
+    top: 98px;
+    left: 70px;
     display: flex;
     align-items: center;
 }
 
-.btn_cart {
+.product__add:hover {
+    box-shadow: 0 0 3px #ffffff;
+}
+
+.btn__cart {
     width: 23px;
     height: 22px;
     padding-right: 8px;
     color: #ffffff;
 }
 
-.product_card .image_1 .hover:hover {
-    visibility: hidden;
+.product__text {
+    padding: 18px 10px;
 }
 
-.product_card .image_2 {
-    height: 280px;
-    background-image: url(img/pr_2.jpg);
-    background-repeat: no-repeat;
-    background-position: center 0;
-}
-
-.product_card .image_3 {
-    height: 280px;
-    background-image: url(img/pr_3.jpg);
-    background-repeat: no-repeat;
-    background-position: -48px 0px;
-}
-
-.product_card .image_4 {
-    height: 280px;
-    background-image: url(img/pr_4.jpg);
-    background-repeat: no-repeat;
-    background-position: center 0;
-}
-
-.product_card .image_5 {
-    height: 280px;
-    background-image: url(img/pr_5.jpg);
-    background-repeat: no-repeat;
-    background-position: center 0;
-}
-
-.product_card .image_6 {
-    height: 280px;
-    background-image: url(img/pr_6.jpg);
-    background-repeat: no-repeat;
-    background-position: center 0;
-}
-
-.product_card .image_7 {
-    height: 280px;
-    background-image: url(img/pr_7.jpg);
-    background-repeat: no-repeat;
-    background-position: center -200px;
-}
-
-.product_card .image_8 {
-    height: 280px;
-    background-image: url(img/pr_8.jpg);
-    background-repeat: no-repeat;
-    background-position: center 0;
-}
-
-.product_card p {
+.product__link {
+    display: block;
     font-family: Arial;
     font-size: 13px;
     font-weight: normal;
@@ -384,11 +348,10 @@ body {
     font-stretch: normal;
     letter-spacing: normal;
     color: #222222;
-    margin-top: 18px;
-    margin-left: 10px;
+    margin-bottom: 14px;
 }
 
-.product_card .price {
+.product__price {
     font-family: Arial;
     font-size: 16px;
     font-weight: normal;
@@ -396,14 +359,12 @@ body {
     font-stretch: normal;
     letter-spacing: normal;
     color: #f16d7f;
-    margin-bottom: 20px;
-    margin-left: 15px;
 }
 
 .featured_footer {
     display: flex;
     justify-content: center;
-    margin-top: 98px;
+    margin-top: 58px;
     margin-bottom: 113px;
     text-align: center;
 }
