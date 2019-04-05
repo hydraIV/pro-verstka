@@ -1348,6 +1348,12 @@ input[type=range]
       color: #656565
       padding-top: 7px
       padding-bottom: 7px
+      &::-webkit-outer-spin-button
+        -webkit-appearance: none
+        margin: 0
+      &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
   
   &_item_first
     display: flex
@@ -1358,6 +1364,7 @@ input[type=range]
     &_product-pic
       width: 100px
       height: 115px
+      object-fit: cover
 
     &_product-desc
       margin-left: 11px
@@ -1374,6 +1381,29 @@ input[type=range]
         font-size: 13px
         line-height: 1.2
         color: #222222
+        margin-bottom: 34px
+
+.sc_txt
+  font-size: 13px
+  line-height: 20px
+  color: #656565
+
+
+.desc_color
+  font-size: 13px
+  line-height: 20px
+  color: #6f6e6e
+
+  & span
+    color: #575757
+
+.desc_size
+  font-size: 13px
+  line-height: 20px
+  color: #6f6e6e
+
+  & span
+    color: #575757
 
 .shopping-cart__control
   display: flex
