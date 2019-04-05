@@ -450,7 +450,7 @@ ul
   margin-right: 32px
 
 .client
-  width: 83px
+  min-width: 83px
   height: 83px
   margin-right: 28.2px
   border-radius: 50%
@@ -1314,13 +1314,13 @@ input[type=range]
   box-sizing: border-box
 
   &_item
-    
     overflow: hidden
     white-space: nowrap
     text-overflow: ellipsis
+    text-align: center
 
   &_item_first
-    
+    width: $container/3.48
 
 .shopping-cart__row
   display: flex
@@ -1336,7 +1336,6 @@ input[type=range]
 
   &_item
     align-items: center
-    text-align: center
     overflow: hidden
     white-space: nowrap
     text-overflow: ellipsis
@@ -1357,9 +1356,7 @@ input[type=range]
   
   &_item_first
     display: flex
-    overflow: hidden
-    white-space: nowrap
-    text-overflow: ellipsis
+    width: $container/3.48
 
     &_product-pic
       width: 100px
