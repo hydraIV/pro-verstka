@@ -1,3 +1,6 @@
+$container: 1140px
+$pink: #f16d7f
+
 *
   margin: 0
   padding: 0
@@ -21,7 +24,7 @@ ul
   height: 100px
 
 .container
-  width: 1140px
+  width: $container
   margin: 0 auto
 
 .header-flex
@@ -1301,6 +1304,7 @@ input[type=range]
   font-weight: 700
   color: #222222
   display: flex
+  justify-content: space-between
   flex-direction: row
   flex-wrap: wrap
   width: 100%
@@ -1310,18 +1314,20 @@ input[type=range]
   box-sizing: border-box
 
   &_item
-    flex-grow: 2
+    
     overflow: hidden
     white-space: nowrap
     text-overflow: ellipsis
 
   &_item_first
-    flex-grow: 5
+    
 
 .shopping-cart__row
   display: flex
+  justify-content: space-between
   flex-direction: row
   flex-wrap: wrap
+  align-items: center
   width: 100%
   margin-top: 25px
   padding-bottom: 25px
@@ -1331,7 +1337,6 @@ input[type=range]
   &_item
     align-items: center
     text-align: center
-    flex-grow: 2
     overflow: hidden
     white-space: nowrap
     text-overflow: ellipsis
@@ -1345,8 +1350,10 @@ input[type=range]
       padding-bottom: 7px
   
   &_item_first
-    flex-grow: 5
     display: flex
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
 
     &_product-pic
       width: 100px
@@ -1367,3 +1374,135 @@ input[type=range]
         font-size: 13px
         line-height: 1.2
         color: #222222
+
+.shopping-cart__control
+  display: flex
+  justify-content: space-between
+  margin-top: 44px
+  margin-bottom: 63px
+
+  &_btn
+    font-size: 14px
+    line-height: 16.8px
+    text-align: left
+    color: #4a4a4a
+    padding: 18px 35px
+    background-color: #ffffff
+    border: solid 1px #eaeaea
+    box-sizing: border-box
+    transition: .22s
+
+    &:hover
+      background-color: $pink
+      color: #ffffff
+      transition: .22s
+      border: solid 1px #ffffff
+      box-sizing: border-box
+
+.shopping-cart__details
+  display: flex
+  justify-content: space-between
+  margin-bottom: 80px
+
+  & .details-col-wrap__title
+    font-size: 16px
+    line-height: 19.2px
+    color: #222222
+    margin-bottom: 20px
+
+  &_shipping
+
+    & .country
+      width: 100%
+      border: solid 1px #eaeaea
+      box-sizing: border-box
+      background-color: #ffffff
+      font-size: 13px
+      color: #b1b1b1
+      padding: 16px
+      margin-bottom: 20px
+
+    & .zip
+      width: 100%
+      border: solid 1px #eaeaea
+      box-sizing: border-box
+      background-color: #ffffff
+      font-size: 13px
+      color: #b1b1b1
+      padding: 16px
+      margin-bottom: 20px
+      
+  .state
+    width: 100%
+    border: solid 1px #eaeaea
+    box-sizing: border-box
+    background-color: #ffffff
+    font-size: 13px
+    color: #b1b1b1
+    padding: 16px
+    margin-bottom: 20px
+
+  .shopping-cart__details_btn
+    font-size: 14px
+    line-height: 16.8px
+    text-align: left
+    color: #4a4a4a
+    padding: 18px 35px
+    background-color: #ffffff
+    border: solid 1px #eaeaea
+    box-sizing: border-box
+    transition: .22s
+
+    &:hover
+      background-color: $pink
+      color: #ffffff
+      transition: .22s
+      border: solid 1px #ffffff
+      box-sizing: border-box
+  
+  .btn_small
+    padding: 12px 15px 12px 15px
+  
+.shopping-cart__details-coupon_coupon-message
+  font-size: 14px
+  color: #000000
+  margin-top: 24px
+  margin-bottom: 24px
+
+.details-col-wrap
+  width: $container/3.48
+
+.checkout-box
+  background-color: #f5f3f3
+  padding: 40px
+
+.sub-total
+  text-align: right
+  font-size: 11px
+  color: #4a4a4a
+  margin-bottom: 14px
+
+.grand-total
+  text-align: right
+  font-size: 16px
+  color: #222222
+  margin-bottom: 40px
+  padding-bottom: 20px
+  border-bottom: 1px solid #e2e2e2
+  box-sizing: border-box
+
+.checkout_btn
+  width: 100%
+  font-size: 16px
+  color: #ffffff
+  background-color: #f16d7f
+  padding: 16px 40px 16px 40px
+  border: none
+  outline: 1px solid #f16d7f
+  transition: .22s
+
+  &:hover
+    color: #4a4a4a
+    background-color: #ffffff
+    outline: 1px solid #ffffff
+    transition: .22s
