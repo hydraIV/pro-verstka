@@ -1,0 +1,29 @@
+{
+  "name": "pro-verstka",
+  "version": "1.0.0",
+  "description": "geek brains study",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hydraIV/pro-verstka.git"
+  },
+  "author": "Anton Petukhov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hydraIV/pro-verstka/issues"
+  },
+  "homepage": "https://github.com/hydraIV/pro-verstka#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch-sass": "^1.4.1",
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "flexboxgrid": "^6.3.1"
+  }
+}
