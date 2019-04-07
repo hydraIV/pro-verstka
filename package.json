@@ -22,5 +22,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-watch-sass": "^1.4.1",
     "node-sass": "^4.11.0"
+  },
+  "dependencies": {
+    "flexboxgrid": "^6.3.1"
   }
 }
