@@ -173,13 +173,22 @@ ul {
 
 .cat_col {
   width: 50%;
-  margin: 0 10px; }
+  margin: 0 10px;
+  position: relative;
+  perspective: 700px; }
+
+.hover {
+  height: 542px; }
 
 .block_1 {
   display: block;
   background-image: url(img/ban_1.jpg);
+  background-repeat: no-repeat;
   height: 542px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  transition: transform .5s; }
+  .block_1:hover {
+    transform: rotateX(180deg); }
 
 .block_2 {
   display: block;
@@ -187,18 +196,27 @@ ul {
   background-repeat: no-repeat;
   background-position: 149px -31px;
   background-color: #dadad2;
-  height: 261px; }
+  height: 261px;
+  transition: transform .5s; }
+  .block_2:hover {
+    transform: rotateY(180deg); }
 
 .block_3 {
   display: block;
   background-image: url(img/ban_3.jpg);
   height: 261px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  transition: transform .5s; }
+  .block_3:hover {
+    transform: rotateY(180deg); }
 
 .block_4 {
   display: block;
   background-image: url(img/ban_4.jpg);
-  height: 542px; }
+  height: 542px;
+  transition: transform .5s; }
+  .block_4:hover {
+    transform: rotateX(180deg); }
 
 .cat {
   margin-top: 98px; }
@@ -256,13 +274,13 @@ ul {
   transition: 0.22s; }
   .product:hover {
     box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16);
-    transition: 0.22s; }
+    transform: scale(1.03); }
     .product:hover .product__add {
       visibility: visible;
       transition: 0.22s; }
     .product:hover .product__img {
       filter: brightness(30%);
-      transition: 0.22s; }
+      transition: 0.33s; }
 
 .product__img {
   object-fit: cover;
