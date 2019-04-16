@@ -1,9 +1,13 @@
 $container: 1140px
 $pink: #F16C7F
+$btn-animation: 0.3s
 
 *
   margin: 0
   padding: 0
+
+*:focus
+  outline: 0
 
 body
   font-family: 'Lato', sans-serif
@@ -40,7 +44,6 @@ ul
 .header__left .logo, .footer_col_lg .logo
   display: flex
   align-items: center
-  font-family: Arial
   font-size: 27px
   font-weight: normal
   font-style: normal
@@ -61,6 +64,7 @@ ul
   display: flex
   align-items: center
   margin-left: 37px
+
   input
     width: 320px
     height: 40px
@@ -74,6 +78,7 @@ ul
     letter-spacing: 0.4px
     color: #a4a4a4
     box-sizing: border-box
+
   button
     width: 38px
     height: 40px
@@ -88,6 +93,10 @@ ul
     color: #B0B0B0
 
 .browse
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
   width: 88px
   height: 40px
   border-radius: 3px 0 0 3px
@@ -97,9 +106,13 @@ ul
   border-right: none
   background-color: #cdcdcc
   background-image: linear-gradient(to bottom, #f9f9f9 0%, #f5f5f5 100%)
-  text-align: center
-  line-height: 38px
+  font-size: 14px
+  letter-spacing: 0.4px
   box-sizing: border-box
+  a
+    color: #222222
+    .fa-caret-down
+      margin-left: 7px
 
 .header__right .button
   color: #fff
@@ -112,15 +125,17 @@ ul
   padding-right: 19px
   line-height: 38px
   text-decoration: none
-  transition: 0.22s
+  transition: all $btn-animation
   &:hover
     color: $pink
     background-color: #ffffff
     outline: 1px solid $pink
-    transition: 0.22s
 
 .header__cart
   margin-right: 26px
+
+.shopping-cart-wrap
+  position: relative
 
 .menu
   display: flex
@@ -179,16 +194,13 @@ ul
   margin: 0 10px
   position: relative
   perspective: 700px
-  
+
 .block_1
   display: block
   background-image: url(img/ban_1.jpg)
   background-repeat: no-repeat
   height: 542px
   margin-bottom: 20px
-  transition: transform .5s
-  &:hover
-    transform: rotateX(180deg)
 
 .block_2
   display: block
@@ -197,26 +209,17 @@ ul
   background-position: 149px -31px
   background-color: #dadad2
   height: 261px
-  transition: transform .5s
-  &:hover
-    transform: rotateY(180deg)
 
 .block_3
   display: block
   background-image: url(img/ban_3.jpg)
   height: 261px
   margin-bottom: 20px
-  transition: transform .5s
-  &:hover
-    transform: rotateY(180deg)
 
 .block_4
   display: block
   background-image: url(img/ban_4.jpg)
   height: 542px
-  transition: transform .5s
-  &:hover
-    transform: rotateX(180deg) 
 
 .cat
   margin-top: 98px
@@ -232,7 +235,6 @@ ul
 
 .cat_col
   h3
-    font-family: Arial
     font-size: 18px
     color: #222222
   h1
@@ -244,7 +246,6 @@ ul
   text-align: center
   margin-top: 96px
   h3
-    font-family: Arial
     font-size: 30px
     font-weight: normal
     font-style: normal
@@ -253,7 +254,6 @@ ul
     color: #222222
   p
     margin-top: 7px
-    font-family: Arial
     font-size: 14px
     font-weight: normal
     font-style: normal
@@ -271,16 +271,16 @@ ul
   width: 261px
   position: relative
   margin-bottom: 39px
-  transition: 0.22s
+  transition: $btn-animation
   &:hover
-    box-shadow: 0px 5px 8px 0 rgba(0, 0, 0, 0.16)
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.16)
     transform: scale(1.03)
     .product__add
       visibility: visible
-      transition: 0.22s
+      transition: $btn-animation
     .product__img
       filter: brightness(30%)
-      transition: 0.33s
+      transition: $btn-animation
 
 .product__img
   object-fit: cover
@@ -296,7 +296,6 @@ ul
   box-sizing: border-box
   line-height: 39px
   border: solid 1px #ffffff
-  font-family: Arial
   font-size: 13px
   font-weight: normal
   font-style: normal
@@ -321,7 +320,6 @@ ul
 
 .product__link
   display: block
-  font-family: Arial
   font-size: 13px
   font-weight: normal
   font-style: normal
@@ -331,7 +329,6 @@ ul
   margin-bottom: 14px
 
 .product__price
-  font-family: Arial
   font-size: 16px
   font-weight: normal
   font-style: normal
@@ -362,7 +359,7 @@ ul
     color: $pink
     background-color: #ffffff
     outline: 1px solid $pink
-    transition: 0.22s
+    transition: $btn-animation
 
 .offer-flex
   display: flex
@@ -372,16 +369,8 @@ ul
   margin-bottom: 97px
 
 .offer_col:first-child
-  position: relative
   min-width: 767px
-  background-image: url(img/offer.jpg)
-  background-repeat: no-repeat
-
-.layer
-  position: absolute
-  height: 100%
-  width: 100%
-  background-image: url(img/layer.png)
+  background-image: url(img/layer.png), url(img/offer.jpg)
   background-repeat: no-repeat
 
 .offer_content_block
@@ -395,7 +384,6 @@ ul
     margin-right: 32px
   .offer_content
     h3
-      font-family: Arial
       font-size: 20px
       font-weight: normal
       font-style: normal
@@ -406,7 +394,6 @@ ul
       color: #fbfbfb
       margin-bottom: 13.7px
     p
-      font-family: Arial
       font-size: 14px
       font-weight: normal
       font-style: normal
@@ -420,7 +407,6 @@ ul
   margin-top: 136.3px
   margin-left: 36.7px
   position: absolute
-  font-family: Arial
   font-weight: normal
   font-style: normal
   font-stretch: normal
@@ -472,7 +458,6 @@ ul
 
 .review_content
   .review
-    font-family: Arial
     font-style: italic
     font-size: 16px
     font-weight: normal
@@ -482,7 +467,6 @@ ul
     color: #222224
     margin-bottom: 19px
   .name
-    font-family: Arial
     font-size: 16px
     font-weight: normal
     font-style: normal
@@ -524,7 +508,6 @@ ul
   border-radius: 23px 0 0 23px
   background-color: #e1e1e1
   opacity: 0.67
-  font-family: Arial
   font-size: 14px
   font-weight: normal
   font-style: normal
@@ -543,7 +526,6 @@ ul
   border: none
   border-radius: 0 23px 23px 0
   text-decoration: none
-  font-family: Arial
   font-size: 14px
   font-weight: normal
   font-style: normal
@@ -553,16 +535,14 @@ ul
   color: #ffffff
   padding: 0 19px
   cursor: pointer
-  transition: 0.22s
+  transition: $btn-animation
   &:hover
     background-color: #ffffff
     color: $pink
-    transition: 0.22s
 
 .subscribe_content
   text-align: center
   h1
-    font-family: Arial
     font-size: 24px
     font-weight: normal
     font-style: normal
@@ -570,7 +550,6 @@ ul
     letter-spacing: 0.6px
     color: #222224
   h3
-    font-family: Arial
     font-size: 14px
     font-weight: normal
     font-style: normal
@@ -587,7 +566,6 @@ ul
   width: 40%
   padding-right: 60.5px
   p
-    font-family: Arial
     font-size: 14px
     font-weight: normal
     font-style: normal
@@ -604,7 +582,6 @@ ul
     li
       margin-bottom: 30px
   li a
-    font-family: Arial
     font-size: 16px
     font-weight: normal
     font-style: normal
@@ -613,7 +590,6 @@ ul
     color: #898989
     text-decoration: none
   h3
-    font-family: Arial
     font-size: 18px
     font-weight: normal
     font-style: normal
@@ -633,7 +609,6 @@ ul
   justify-content: space-between
 
 .bottom .copy
-  font-family: Arial
   font-size: 16px
   font-weight: normal
   font-style: normal
@@ -658,6 +633,7 @@ ul
     font-size: 14px
     background-color: #fff
     color: #B2B2B2
+    transition: all $btn-animation
     &:hover
       background-color: $pink
       color: #F7F7F8
@@ -672,7 +648,6 @@ ul
   align-items: center
 
 .bc__header
-  font-family: Arial
   font-size: 24px
   font-weight: normal
   font-style: normal
@@ -682,7 +657,6 @@ ul
   color: $pink
 
 .bc__nav
-  font-family: Arial
   font-size: 14px
   font-weight: normal
   font-style: normal
@@ -694,6 +668,7 @@ ul
 .breadcrumb
   .bc__link
     color: #636363
+    transition: color $btn-animation
     &:hover
       color: $pink
   .current__page
@@ -707,11 +682,7 @@ ul
   min-width: 243px
   margin-right: 50px
 
-*:focus
-  outline: 0
-
 summary
-  font-family: Arial
   font-size: 14px
   font-weight: normal
   font-style: normal
@@ -742,7 +713,6 @@ summary
   margin-left: 17px
 
 .sidebar__link
-  font-family: Arial
   font-size: 14px
   font-weight: normal
   font-style: normal
@@ -750,6 +720,7 @@ summary
   line-height: 2.36
   letter-spacing: normal
   color: #6f6e6e
+  transition: color $btn-animation
   &:hover
     color: #ef5b70
 
@@ -762,16 +733,12 @@ summary
 .fa-sort-down
   color: #6F6E6E
 
-
-
 .top__filter
-  fieldset
-    border: none
+  border: none
   display: flex
   justify-content: space-between
   margin-bottom: 40px
   h2
-    font-family: Arial
     font-size: 14px
     font-weight: normal
     font-style: normal
@@ -794,7 +761,6 @@ summary
   padding-right: 12px
   border-right: solid 1px #dfdfdf
   box-sizing: border-box
-  font-family: Arial
   font-size: 14px
   font-weight: normal
   font-style: normal
@@ -807,7 +773,6 @@ summary
 
 .size__filter
   label
-    font-family: OpenSans
     font-size: 14px
     font-weight: normal
     font-style: normal
@@ -818,8 +783,6 @@ summary
     margin-bottom: 13px
   input[type=checkbox]
     margin-right: 9px
-
-
 
 input[type=range]
   -webkit-appearance: none
@@ -841,13 +804,11 @@ input[type=range]
     cursor: pointer
     -webkit-appearance: none
     margin-top: -2px
-  &:focus::-webkit-slider-runnable-track
 
 .range__legend
   display: flex
   justify-content: space-between
   p
-    font-family: OpenSans
     font-size: 14px
     font-weight: normal
     font-style: normal
@@ -855,8 +816,6 @@ input[type=range]
     line-height: 1.86
     letter-spacing: normal
     color: #6f6e6e
-
-
 
 .sort_box
   height: 50px
@@ -872,7 +831,6 @@ input[type=range]
   background-color: #ffffff
   padding: 7px 10px
   padding-right: 20px
-  font-family: Arial
   font-size: 14px
   font-weight: normal
   font-style: normal
@@ -884,7 +842,6 @@ input[type=range]
 
 .sort_box label
   padding-left: 13px
-  font-family: Arial
   font-size: 14px
   font-weight: normal
   font-style: normal
@@ -919,7 +876,6 @@ input[type=range]
   align-items: center
   padding: 0 16px
   a
-    font-family: Arial
     font-size: 16px
     font-weight: normal
     font-style: normal
@@ -938,20 +894,18 @@ input[type=range]
   width: 150px
   height: 44px
   border-radius: 3px
-  border: solid 1px #ef5b70
+  border: solid 1px $pink
   background-color: #ffffff
-  font-family: Arial
   font-size: 16px
   font-weight: normal
   font-style: normal
   font-stretch: normal
   letter-spacing: normal
-  color: #ef5b70
-  transition: 0.22s
+  color: $pink
+  transition: all $btn-animation
   &:hover
-    background-color: #ef5b70
+    background-color: $pink
     color: #ffffff
-    transition: 0.22s
 
 .feature_box
   background-color: #222224
@@ -965,7 +919,6 @@ input[type=range]
   text-align: center
   padding: 90px 0
   h3
-    font-family: Arial
     font-size: 20px
     font-weight: normal
     font-style: normal
@@ -975,7 +928,6 @@ input[type=range]
     margin-top: 30px
     margin-bottom: 13.7px
   p
-    font-family: Arial
     font-size: 14px
     font-weight: normal
     font-style: normal
@@ -993,7 +945,9 @@ input[type=range]
 .drop
   position: absolute
   z-index: 100
-  display: none
+  visibility: hidden
+  display: flex
+  opacity: 0
   justify-content: space-between
   border-radius: 5px
   background-color: #ffffff
@@ -1001,6 +955,7 @@ input[type=range]
   border: solid 1px #e9e9e9
   top: 51px
   left: -6px
+  transition: all $btn-animation ease-in
   &::before
     content: ""
     width: 12px
@@ -1013,8 +968,21 @@ input[type=range]
     top: -7px
     left: 62px
 
+.drop_browse
+  top: 38px
+  left: -2px
+  &::before
+    right: auto
+    left: 67px
+
+.drop_cart
+  top: 45px
+  left: -8px
+  &::before
+    right: auto
+    left: 15px
+
 .drop__link
-  font-family: Arial
   font-size: 14px
   font-weight: normal
   font-style: normal
@@ -1030,7 +998,6 @@ input[type=range]
   padding-top: 25px
   margin-bottom: 12px
   border-bottom: solid 1px #e9e9e9
-  font-family: Arial
   font-size: 14px
   font-weight: normal
   font-style: normal
@@ -1054,10 +1021,11 @@ input[type=range]
   position: relative
 
 .menu__link:hover
-  color: #ef5b70
+  color: $pink
 
 .menu__list:hover .drop
-  display: flex
+  visibility: visible
+  opacity: 1
 
 .drop_last
   left: auto
@@ -1066,11 +1034,70 @@ input[type=range]
     left: auto
     right: 62px
 
+.drop-cart-item
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-top: 20px
+  padding-bottom: 16px
+  border-bottom: 1px solid rgba(237, 237, 237, 0.75)
+  transition: transform $btn-animation
+  &:hover
+    transform: scale(1.03)
+  b
+    font-size: 12px
+    font-weight: 700
+  .drop-stars
+    font-size: 12px
+    color: #E4AF48
+    margin-top: 12px
+    margin-bottom: 12px
+  p
+    font-size: 12px
+    color: $pink
+  .drop-delete
+    margin: 0
+  .total
+    border: none
+    margin-bottom: 32px
+    b
+      font-size: 16px
+      font-weight: 700
+
+.drop-item-descr
+  flex-grow: 1
+  margin-left: 16px
+
+.drop-product-link
+  display: block
+
+.drop-item-text
+  display: flex
+
+.drop-btn
+  display: block
+  color: #4A4A4A
+  border: solid 1px #EEEEEE
+  box-sizing: border-box
+  padding: 20px 0
+  text-align: center
+  transition: all $btn-animation
+  &:hover
+    border: solid 1px #4A4A4A
+.drop-checkout
+  color: $pink
+  border: solid 1px $pink
+  margin-bottom: 10px
+  &:hover
+    color: #ffffff
+    background-color: $pink
+    border: solid 1px $pink
+
 .footer_link:hover
   color: $pink
 
 .pagination__link:hover, .trending__link:hover, .header__form button:hover
-  color: #ef5b70
+  color: $pink
 
 .single__flex
   display: flex
@@ -1154,7 +1181,7 @@ input[type=range]
 .product-descr-header_hr2
   width: 63px
   position: absolute
-  border-bottom: 3px solid #ef5b70
+  border-bottom: 3px solid $pink
   box-sizing: border-box
   left: 0
   right: 0
@@ -1199,7 +1226,7 @@ input[type=range]
   font-stretch: normal
   line-height: 1
   letter-spacing: normal
-  color: #ef5b70
+  color: $pink
   text-align: center
   margin-bottom: 33px
 
@@ -1267,19 +1294,18 @@ input[type=range]
   margin-top: 28px
   width: 100%
   height: 55px
-  border: solid 1px #ef5b70
+  border: solid 1px $pink
   box-sizing: border-box
   background-color: #ffffff
-  transition: 0.22s
+  transition: all $btn-animation
   background-image: url(img/pink_cart.png)
   background-repeat: no-repeat
   background-position: 39% center
-  transition: .22s
   &:hover
     background-image: url(img/hover_cart.png)
     background-repeat: no-repeat
     background-position: 39% center
-    background-color: #ef5b70
+    background-color: $pink
     .btn__txt
       color: #ffffff
 
@@ -1290,7 +1316,7 @@ input[type=range]
   font-stretch: normal
   line-height: 1.2
   letter-spacing: normal
-  color: #ef5b70
+  color: $pink
   margin-left: 15px
 
 .also-like__products
@@ -1331,9 +1357,6 @@ input[type=range]
     text-overflow: ellipsis
     text-align: center
 
-  &_item_first
-    
-
 .shopping-cart__row
   display: flex
   justify-content: space-between
@@ -1345,6 +1368,10 @@ input[type=range]
   padding-bottom: 25px
   border-bottom: solid 1px #eaeaea
   box-sizing: border-box
+  transition: transform $btn-animation
+  &:hover
+    transform: scale(1.02)
+
   &_item
     align-items: center
     overflow: hidden
@@ -1360,6 +1387,8 @@ input[type=range]
       color: #656565
       padding-top: 7px
       padding-bottom: 7px
+      border: 1px solid #656565
+      box-sizing: border-box
       &::-webkit-outer-spin-button
         -webkit-appearance: none
         margin: 0
@@ -1369,7 +1398,6 @@ input[type=range]
   
   &_item_first
     display: flex
-    
 
     &_product-pic
       width: 100px
@@ -1392,6 +1420,7 @@ input[type=range]
         line-height: 1.2
         color: #222222
         margin-bottom: 34px
+        display: block
 
 .sc_txt
   font-size: 13px
@@ -1539,13 +1568,11 @@ input[type=range]
   padding: 16px 40px 16px 40px
   border: none
   outline: 1px solid $pink
-  transition: .22s
-
+  transition: all $btn-animation
   &:hover
     color: #4a4a4a
     background-color: #ffffff
     outline: 1px solid #ffffff
-    transition: .22s
 
 .delete-product
   display: block
@@ -1555,13 +1582,14 @@ input[type=range]
   height: 16px
   border-radius: 50%
   background-color: #C0C0C0
+  transition: background-color $btn-animation
   &:hover
     background-color: $pink
   &__cross
     display: block
     width: 16px
     height: 16px
-    transition: transform .25s ease-in-out
+    transition: transform $btn-animation ease-in-out
     &:hover 
       transform: scale(0)
     &::before
@@ -1592,3 +1620,59 @@ input[type=range]
       border-top: 1px solid #ffffff
       transform: rotate(-45deg)
       transform-origin: center
+
+/*Checkboxes styles*/
+input[type="checkbox"]
+  display: none
+
+input[type="checkbox"] + label
+  display: block
+  position: relative
+  padding-left: 35px
+  margin-bottom: 20px
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+
+input[type="checkbox"] + label:last-child 
+  margin-bottom: 0
+
+input[type="checkbox"] + label:before
+  content: ''
+  display: block
+  width: 13px
+  height: 13px
+  border: 1px solid #ebebeb
+  position: absolute
+  left: 0
+  top: 0
+  opacity: 1
+  -webkit-transition: all .12s, border-color .08s
+  transition: all .12s, border-color .08s
+
+input[type="checkbox"]:checked + label:before
+  width: 10px
+  top: -5px
+  left: 5px
+  border-radius: 0
+  opacity: 1
+  border-top-color: transparent
+  border-left-color: transparent
+  border-right-color: $pink
+  border-bottom-color: $pink
+  border-right-width: 2px
+  border-bottom-width: 2px
+  -webkit-transform: rotate(45deg)
+  transform: rotate(45deg)
+
+
+.product-buy-block .color-select option:after
+  content: " "
+  height: 12px
+  width: 12px
+  display: inline-block
+.product-buy-block .color-select option.red:after
+  background: $pink
+
+//gotovo
