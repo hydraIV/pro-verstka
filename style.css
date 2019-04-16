@@ -1260,7 +1260,7 @@ input[type=range] {
   border: solid 1px #ef5b70;
   box-sizing: border-box;
   background-color: #ffffff;
-  transition: 0.22s;
+  transition: all 0.3s;
   background-image: url(img/pink_cart.png);
   background-repeat: no-repeat;
   background-position: 39% center;
@@ -1555,3 +1555,57 @@ input[type=range] {
       border-top: 1px solid #ffffff;
       transform: rotate(-45deg);
       transform-origin: center; }
+
+/*Checkboxes styles*/
+input[type="checkbox"] {
+  display: none; }
+
+input[type="checkbox"] + label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; }
+
+input[type="checkbox"] + label:last-child {
+  margin-bottom: 0; }
+
+input[type="checkbox"] + label:before {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 13px;
+  border: 1px solid #ebebeb;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  -webkit-transition: all .12s, border-color .08s;
+  transition: all .12s, border-color .08s; }
+
+input[type="checkbox"]:checked + label:before {
+  width: 10px;
+  top: -5px;
+  left: 5px;
+  border-radius: 0;
+  opacity: 1;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-right-color: #F16C7F;
+  border-bottom-color: #F16C7F;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+.product-buy-block .color-select option:after {
+  content: " ";
+  height: 12px;
+  width: 12px;
+  display: inline-block; }
+
+.product-buy-block .color-select option.red:after {
+  background: #F16C7F; }
