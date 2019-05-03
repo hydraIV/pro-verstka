@@ -1107,6 +1107,7 @@ input[type=range]
   height: 777px
   border: solid 1px #eaeaea
   background-color: #f7f7f7
+  flex-direction: row
 
 .slide_position
   display: flex
@@ -1674,4 +1675,13 @@ input[type="checkbox"]:checked + label:before
   display: inline-block
 .product-buy-block .color-select option.red:after
   background: $pink
-  
+
+// Прижимаем футер
+
+.wraper_all
+  min-height: 100%
+  display: flex
+  flex-direction: column
+
+.top
+  flex-grow: 1
